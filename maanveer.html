@@ -122,6 +122,26 @@ typing();
 <div class="loader">
 <span></span>
 </div>
+<script>
 
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loading").style.opacity="0";
+
+setTimeout(()=>{
+
+document.getElementById("loading").style.display="none";
+
+document.body.classList.add("fade-in");
+
+},800);
+
+},3000);
+
+});
+
+</script>
 </div>
 </html>
