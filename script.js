@@ -1,43 +1,59 @@
 // Friendship Vault Password
 
-function checkPassword() {
+const correctPassword = "RoKo";
 
-    const password = document.getElementById("password").value;
+function unlockVault() {
 
-    const error = document.getElementById("error");
+const password = document.getElementById("password").value;
 
-    if(password === "RoKo"){
+const message = document.getElementById("message");
 
-        error.style.color="#00ff88";
+const button = document.querySelector("button");
 
-        error.innerHTML="✅ Access Granted...";
+if(password === correctPassword){
 
-        setTimeout(function(){
+message.style.color="#22c55e";
 
-            window.location.href="choose.html";
+message.innerHTML="🔓 Access Granted...";
 
-        },1200);
+button.innerHTML="Opening...";
 
-    }
+button.disabled=true;
 
-    else{
+setTimeout(()=>{
 
-        error.style.color="#ff4d4d";
+window.location.href="choose.html";
 
-        error.innerHTML="❌ Wrong Password";
+},1800);
 
-    }
+}else{
+
+message.style.color="#ef4444";
+
+message.innerHTML="❌ Wrong Password";
+
+const box=document.querySelector(".login-box");
+
+box.animate([
+{transform:"translateX(-8px)"},
+{transform:"translateX(8px)"},
+{transform:"translateX(-8px)"},
+{transform:"translateX(8px)"},
+{transform:"translateX(0px)"}
+],{
+duration:400
+});
 
 }
 
-// Press Enter to Unlock
+}
 
-document.addEventListener("keydown",function(e){
+document.getElementById("password").addEventListener("keypress",function(e){
 
-    if(e.key==="Enter"){
+if(e.key==="Enter"){
 
-        checkPassword();
+unlockVault();
 
-    }
+}
 
 });
