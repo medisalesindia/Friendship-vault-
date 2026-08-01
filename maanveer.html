@@ -3,59 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Friendship Day Maanveer</title>
 
-<link rel="stylesheet" href="style.css">
+<title>Happy Friendship Day - Maanveer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<section class="friend-page">
+<div class="hero">
 
-<h1>💙 Happy Friendship Day, Maanveer!</h1>
+<img src="Images/maanveer.jpg" class="hero-image">
 
-<p class="subtitle">
-Thanks for being an amazing friend.
-Wishing you happiness, success and lots of smiles!
-</p>
+<div class="overlay">
 
-<div class="gallery">
+<h1>Happy Friendship Day ❤️</h1>
 
-<img src="Images/maanveer1.jpg">
+<h2>Maanveer</h2>
 
-<img src="Images/maanveer2.jpg">
-
-<img src="Images/maanveer3.jpg">
+<button class="music-btn">
+▶ Play Stand By Me
+</button>
 
 </div>
 
-<div class="message">
+</div>
 
-<h2>A Message For You</h2>
+<section class="message-section">
 
-<p>
+<h2>A Message For You 💙</h2>
 
-No matter how busy life gets,
-our friendship will always stay special.
-
-Thank you for every laugh,
-every memory,
-and every moment.
-
-Happy Friendship Day ❤️
+<p id="typewriter">
 
 </p>
-
-</div>
 
 <a href="choose.html" class="back-btn">
 
-⬅ Back
+⬅ Back to Friends
 
 </a>
 
 </section>
 
+<script>
+
+const text=`Some people come into our lives and leave memories.
+
+But a few become a part of our story forever.
+
+Thank you for every laugh,
+every joke,
+every crazy plan,
+and every unforgettable memory.
+
+No matter where life takes us,
+I know our friendship will always stay special.
+
+Happy Friendship Day, Brother! ❤️
+
+— Rajveer`;
+
+let i=0;
+
+function typing(){
+
+if(i<text.length){
+
+document.getElementById("typewriter").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,35);
+
+}
+
+}
+
+typing();
+
+</script>
+
 </body>
-  </html>m
+
+</html>
