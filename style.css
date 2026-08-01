@@ -235,3 +235,98 @@ height:100px;
 }
 
   }
+/* ========================= */
+/* FRIEND PAGE */
+/* ========================= */
+
+.hero{
+position:relative;
+width:100%;
+height:100vh;
+overflow:hidden;
+}
+
+.hero-image{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(to top,
+rgba(0,0,0,.80),
+rgba(0,0,0,.35));
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.overlay h1{
+font-size:52px;
+color:#fff;
+margin-bottom:10px;
+text-shadow:0 5px 20px rgba(0,0,0,.6);
+}
+
+.overlay h2{
+font-size:34px;
+color:#93c5fd;
+margin-bottom:30px;
+}
+
+.music-btn{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+color:#fff;
+background:linear-gradient(90deg,#2563eb,#3b82f6);
+box-shadow:0 10px 30px rgba(37,99,235,.4);
+transition:.3s;
+}
+
+.music-btn:hover{
+transform:scale(1.08);
+box-shadow:0 15px 35px rgba(37,99,235,.55);
+}
+
+.message-section{
+padding:70px 20px;
+background:#050816;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.message-section h2{
+font-size:36px;
+color:#fff;
+margin-bottom:30px;
+}
+
+#typewriter{
+max-width:850px;
+line-height:2;
+font-size:19px;
+color:#dbeafe;
+background:rgba(255,255,255,.06);
+padding:35px;
+border-radius:25px;
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.12);
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+white-space:pre-line;
+}
+
+.back-btn{
+margin
